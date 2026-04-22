@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:template match="/">
+    <html>
+      <head>
+        <title>Mi Biblioteca Interactiva</title>
+        <style>
+          table { border-collapse: collapse; width: 50%; margin-bottom: 50px; }
+          th, td { border: 1px solid black; padding: 8px; text-align: left; }
+          .ficha { border: 2px solid #333; padding: 15px; margin: 20px 0; background: #f9f9f9; }
+        </style>
+      </head>
+      <body>
+        <h1>Índice de Libros</h1>
+        <table>
+          <tr><th>Título</th><th>Autor</th></tr>
+          <xsl:for-each select="biblioteca/libro">
+            <tr>
+              <td><a href="#{@id}"><xsl:value-of select="titulo"/></a></td>
+              <td><xsl:value-of select="autor"/></td>
+            </tr>
+          </xsl:for-each>
+        </table>
+
+        <h1>Detalles de los Libros</h1>
+        <xsl:for-each select="biblioteca/libro">
+          <div class="ficha" id="{@id}">
+            <h2><xsl:value-of select="titulo"/></h2>
+            <p><strong>Autor:</strong> <xsl:value-of select="autor"/></p>
+            <p><strong>Año:</strong> <xsl:value-of select="anio"/></p>
+            <p><strong>Páginas:</strong> <xsl:value-of select="paginas"/></p>
+            <p><strong>Sinopsis:</strong> <xsl:value-of select="sinopsis"/></p>
+          </div>
+        </xsl:for-each>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>
