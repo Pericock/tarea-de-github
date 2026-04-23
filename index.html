@@ -1,37 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cargando Biblioteca de pmm-stikman...</title>
-    <meta http-equiv="refresh" content="3;url=biblioteca.xml">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f4f4f9;
-        }
-        .loader {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #3498db;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 2s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Mi Biblioteca Funcional</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background: #f0f0f5;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 60%;
+        margin: 0 auto 40px auto;
+        background: white;
+    }
+
+    th, td {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background: #222;
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+        color: #0066cc;
+        font-weight: bold;
+    }
+
+    .ficha {
+        border: 2px solid #333;
+        padding: 15px;
+        margin: 20px auto;
+        width: 60%;
+        background: #ffffff;
+        border-radius: 10px;
+    }
+
+    .ficha h2 {
+        margin-top: 0;
+        color: #222;
+    }
+</style>
+
 </head>
+
 <body>
-    <div class="loader"></div>
-    <h1>Entrando en la biblioteca...</h1>
-    <p>Si no eres redirigido automáticamente, <a href="biblioteca.xml">haz clic aquí</a>.</p>
+
+<h1>Índice de Libros</h1>
+
+<table>
+    <tr>
+        <th>Título</th>
+        <th>Autor</th>
+    </tr>
+
+    <tr>
+        <td><a href="#libro1">El Quijote</a></td>
+        <td>Miguel de Cervantes</td>
+    </tr>
+</table>
+
+
+<h1>Detalles de los Libros</h1>
+
+<div class="ficha" id="libro1">
+    <h2>El Quijote</h2>
+    <p><strong>Autor:</strong> Miguel de Cervantes</p>
+    <p><strong>Año:</strong> 1605</p>
+    <p><strong>Páginas:</strong> 1032</p>
+    <p><strong>Sinopsis:</strong> Las aventuras de un caballero andante en la Mancha.</p>
+</div>
+
 </body>
 </html>
