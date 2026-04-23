@@ -1,0 +1,68 @@
+<!-- archivo: coches.xml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="coches.xsl"?>
+<concesionario>
+</concesionario>
+
+
+<!-- archivo: coches.xsl -->
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+<html>
+<head>
+    <title>Concesionario de Coches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+        }
+        .header {
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            color: #ffcc00;
+            text-shadow: 2px 2px 5px black;
+        }
+        .info {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            text-align: center;
+        }
+        .info p {
+            margin: 8px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🚗 Concesionario Premium</h1>
+    </div>
+
+    <div class="info">
+        <p>Bienvenido al mejor concesionario</p>
+        <p>Coches deportivos de alta gama</p>
+        <p>Marcas: BMW, Audi, Mercedes, Lamborghini</p>
+        <p>Financiación disponible</p>
+        <p>Entrega inmediata</p>
+        <p>Garantía oficial</p>
+        <p>Asesoramiento personalizado</p>
+    </div>
+
+</body>
+</html>
+</xsl:template>
+
+</xsl:stylesheet>
